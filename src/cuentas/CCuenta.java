@@ -5,7 +5,7 @@
 
 package cuentas;
 
-
+/** CLASE CCUENTA, SE UTILIZARÁ PARA CREAR INSTANCIAS QUE TENGAN COMO ATRIBUTOS EL NOMBRE, LA CUENTA, EL SALDO Y EL TIPO DE INTERES*/
 public class CCuenta {
 
 
@@ -44,14 +44,14 @@ public class CCuenta {
         return getSaldo();
     }
 
-
+/** METODO INGRESAR EN EL QUE SE CREA LA CONDICIÓN PARA DAR AVISO CON UN PRINT SI SE INGRESA UN VALOR INFERIOR A 0*/
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
         setSaldo(getSaldo() + cantidad);
     }
-
+/** METODO RETIRAR IGUAL QUE EL ANTERIOR, PARA CONTROLAR LA ENTRADA ERRONEA DE DATOS, SI LA CANTIDAD ES INFERIOR A 0 O SI EL SALDO ES INFERIOR A LA CANTIDAD SOLICITADA*/
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -67,7 +67,7 @@ public class CCuenta {
         return getCuenta();
     }
 
-
+/**GETTERS Y SETTERS*/
     public String getNombre() {
         return nombre;
     }
